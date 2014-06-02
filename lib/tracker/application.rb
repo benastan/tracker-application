@@ -6,6 +6,9 @@ require "tracker/application/load_blocked_stories"
 require "tracker/application/load_story_parent_story_stories"
 require "tracker/application/load_story_child_story_stories"
 require "tracker/application/load_epic_stories"
+require "tracker/application/load_started_stories"
+require "tracker/application/load_finished_stories"
+require "tracker/application/load_closed_stories"
 
 module Tracker
   module Application

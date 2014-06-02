@@ -26,7 +26,15 @@ module Tracker
       end
 
       it 'includes only the epic story' do
-        expect(result.epic_stories.all).to eq [{ id: epic_story_id, title: 'Epic story' }]
+        expect(result.epic_stories.all).to eq [
+          {
+            id: epic_story_id,
+            title: 'Epic story',
+            started_at: nil,
+            finished_at: nil,
+            closed_at: nil
+          }
+        ]
       end
     end
   end

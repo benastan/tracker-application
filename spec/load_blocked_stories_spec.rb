@@ -20,7 +20,15 @@ module Tracker
       end
 
       it 'includes the blocked story and not the unblocked story' do
-        expect(result.blocked_stories.all).to eq [{ id: blocked_story_id, title: 'Blocked story' }]
+        expect(result.blocked_stories.all).to eq [
+          {
+            id: blocked_story_id,
+            title: 'Blocked story',
+            started_at: nil,
+            finished_at: nil,
+            closed_at: nil
+          }
+        ]
       end
     end
   end
