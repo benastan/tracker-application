@@ -1,6 +1,7 @@
 require "tracker/application/version"
 require "tracker/application/create_story"
 require "tracker/application/create_story_story"
+require "tracker/application/load_story"
 require "tracker/application/load_unblocked_stories"
 require "tracker/application/load_blocked_stories"
 require "tracker/application/load_story_parent_story_stories"

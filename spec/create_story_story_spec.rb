@@ -42,7 +42,7 @@ module Tracker
           Tracker.pg[:story_stories].insert(attributes)
         end
         
-        it 'is does not create a story story' do
+        it 'does not create a story story' do
           expect(->{subject}).not_to change{Tracker.pg[:story_stories].count}.by(1)
         end
 
