@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'tracker-p_g', path: '../tracker-p_g'
+gem 'tracker-web', path: '../tracker-web'
 
-# Specify your gem's dependencies in tracker-application.gemspec
 gemspec

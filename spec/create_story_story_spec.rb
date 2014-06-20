@@ -54,6 +54,34 @@ module Tracker
           expect(result).not_to be_success
         end
       end
+
+      context 'when the child story is the parent story of a story that is the parent to the parent story' do
+        let!(:parent_parent_story_id) do
+          Tracker.pg[:stories].insert(title: 'Parent story story')
+        end
+
+        let!(:parent_parent_story_story_id) do
+          Tracker.pg[:story_stories].insert(
+            child_story_id: parent_story_id,
+            parent_story_id: parent_parent_story_id
+          )
+        end
+
+        let!(:parent_parent_parent_story_id) do
+          Tracker.pg[:story_stories].insert(
+            child_story_id: parent_parent_story_id,
+            parent_story_id: child_story_id
+          )
+        endx
+
+        it 'deletes parent_parent_parent_story_id' do
+          expect(->{subject}).to change{Tracker.pg[:story_stories][id: parent_parent_parent_story_id]}.from(
+            id: parent_parent_parent_story_id,
+            child_story_id: parent_parent_story_id,
+            parent_story_id: child_story_id
+          ).to(nil)
+        end
+      end
     end
   end
 end

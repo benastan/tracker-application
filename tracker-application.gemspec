@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Tracker::Application::VERSION
   spec.authors       = ["Ben Bergstein"]
   spec.email         = ["bennyjbergstein@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = "Application logic for a tracker app"
+  spec.summary       = ""
   spec.homepage      = ""
   spec.license       = "MIT"
 
@@ -19,6 +19,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "interactor"
+  spec.add_dependency "tracker-p_g"
   
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "foreman"
