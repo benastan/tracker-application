@@ -15,7 +15,7 @@ module Tracker
 
       context 'when the story story does not exist' do
         it 'is empty and does not blow up' do
-          expect(result.story_story).should be_nil
+          expect(result.story_story).to be_nil
         end
       end
 

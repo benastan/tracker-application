@@ -1,5 +1,6 @@
 require 'bundler'
 Bundler.require
+require 'tracker/p_g'
 require 'tracker/application'
 
 ENV['TEST_DATABASE_URL'] ||= 'postgres://postgres@localhost:5432/new_tracker_test'

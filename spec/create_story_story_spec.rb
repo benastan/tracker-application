@@ -43,7 +43,7 @@ module Tracker
         end
         
         it 'does not create a story story' do
-          expect(->{subject}).not_to change{Tracker.pg[:story_stories].count}.by(1)
+          expect(->{subject}).not_to change{Tracker.pg[:story_stories].count}
         end
 
         it 'includes a message in the result' do
@@ -72,7 +72,7 @@ module Tracker
             child_story_id: parent_parent_story_id,
             parent_story_id: child_story_id
           )
-        endx
+        end
 
         it 'deletes parent_parent_parent_story_id' do
           expect(->{subject}).to change{Tracker.pg[:story_stories][id: parent_parent_parent_story_id]}.from(
