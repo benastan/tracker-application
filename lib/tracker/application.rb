@@ -12,6 +12,13 @@ require "tracker/application/load_started_stories"
 require "tracker/application/load_finished_stories"
 require "tracker/application/load_closed_stories"
 require "tracker/application/load_stories_list"
+require "tracker/application/start_story"
+require "tracker/application/finish_story"
+require "tracker/application/close_story"
+require "tracker/application/unstart_story"
+require "tracker/application/unfinish_story"
+require "tracker/application/unclose_story"
+require "tracker/application/reset_story"
 
 module Tracker
   module Application
