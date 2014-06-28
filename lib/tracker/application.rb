@@ -11,6 +11,7 @@ require "tracker/application/load_epic_stories"
 require "tracker/application/load_started_stories"
 require "tracker/application/load_finished_stories"
 require "tracker/application/load_closed_stories"
+require "tracker/application/load_stories_list"
 
 module Tracker
   module Application
